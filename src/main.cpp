@@ -33,7 +33,7 @@ void setup()
   // WiFi
 
   // MQTT
-
+  BackgroundSetupAFTER();
 }
 
 void loop()
