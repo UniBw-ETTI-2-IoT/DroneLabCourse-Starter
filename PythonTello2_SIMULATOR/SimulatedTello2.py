@@ -29,7 +29,7 @@ def on_message(client, userdat,  message):
         print("cycle finished, standing in Idle On Mission Pad1...\n")
 
 
-client = mqtt.Client(strSimulatedAircraftID)
+client = mqtt.Client(client_id=strSimulatedAircraftID, callback_api_version=mqtt.CallbackAPIVersion.VERSION2)
 client.connect(mqttBroker)
 time.sleep(1)
 client.publish(strSimulatedAircraftID+"/command","I'm listening to commands on this topic. :)", qos=2)
